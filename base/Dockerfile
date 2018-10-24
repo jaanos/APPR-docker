@@ -16,4 +16,4 @@ RUN install -o ${NB_USER} -g ${NB_USER} -d /var/log/shiny-server && \
     install -o ${NB_USER} -g ${NB_USER} /dev/null /var/run/shiny-server.pid
 
 USER ${NB_USER}
-RUN Rscript install.R
+RUN Rscript ${HOME}/install.R && rm ${HOME}/install.R
