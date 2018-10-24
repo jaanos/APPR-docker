@@ -99,3 +99,6 @@ RUN pip install --no-cache-dir nbrsessionproxy==0.7.0 && \
 RUN R --quiet -e "install.packages('devtools', repos='https://mran.microsoft.com/snapshot/2018-02-01', method='libcurl')" && \
     R --quiet -e "devtools::install_github('IRkernel/IRkernel', ref='0.8.11')" && \
     R --quiet -e "IRkernel::installspec(prefix='$NB_PYTHON_PREFIX')"
+
+USER ${NB_USER}
+CMD ["jupyter", "notebook", "--ip", "0.0.0.0"]
