@@ -49,6 +49,8 @@ RUN apt-get update && \
        r-base \
        sudo \
        cargo \
+       libgdal1i \
+       libgeos-dev \
        && apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
