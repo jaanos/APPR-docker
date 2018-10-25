@@ -49,7 +49,7 @@ RUN apt-get update && \
        r-base \
        sudo \
        cargo \
-       libgdal1i \
+       libgdal-dev \
        libgeos-dev \
        && apt-get purge && \
     apt-get clean && \
