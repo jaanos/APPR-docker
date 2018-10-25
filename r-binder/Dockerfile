@@ -41,18 +41,14 @@ RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
        less \
        nodejs \
-       unzip \
-       && apt-get purge && \
-    apt-get clean && \
-    rm -rf /var/lib/apt/lists/*
-
-RUN apt-get update && \
+       unzip && \
     apt-get install --yes \
        libapparmor1 \
        lsb-release \
        psmisc \
        r-base \
        sudo \
+       cargo \
        && apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
