@@ -17,7 +17,6 @@ install.packages(c(
     "forecast",
     "geojsonio",
     "GGally",
-    "gganimate",
     "ggdendro",
     "ggmap",
     "ggplot2",
@@ -70,3 +69,4 @@ install.packages(c(
 
 library(devtools)
 install_github("jaanos/rvest", ref="table-span-filling")
+install_github('thomasp85/gganimate')
