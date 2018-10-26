@@ -1,0 +1,20 @@
+install.packages(c(
+    "csvread",
+    "debugme",
+    "dichromat",
+    "foreach",
+    "geojson",
+    "kableExtra",
+    "lpSolve",
+    "manipulateWidget",
+    "miniUI",
+    "pbapply",
+    "plotGoogleMaps",
+    "plumbr",
+    "prediction",
+    "testthat",
+    "tstools"
+))
+
+library(devtools)
+install_github("trnnick/TStools")
