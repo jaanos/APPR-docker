@@ -1,7 +1,7 @@
 # Konfiguracije za Docker za potrebe APPR
 
-* [![Jupyter](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/master) Jupyter
-* [![RStudio](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/master?urlpath=rstudio) RStudio
+* [![Jupyter](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/r-binder-image) Jupyter
+* [![RStudio](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/r-binder-image?urlpath=rstudio) RStudio
 
 Ta repozitorij vsebuje konfiguracijske datoteke za [Docker](https://shiny.rstudio.com/) za poganjanje projektov pri predmetu Analiza podatkov s programom R na spletu v orodju [Binder](https://mybinder.org/) z okoljema [RStudio](https://www.rstudio.com/) in [Shiny](https://shiny.rstudio.com/).
 
