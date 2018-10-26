@@ -1,1 +1,1 @@
-FROM jaanos/appr:r-binder
+FROM jaanos/appr:extended

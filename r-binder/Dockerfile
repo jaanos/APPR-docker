@@ -75,7 +75,7 @@ RUN bash /tmp/install-miniconda.bash && \
     rm /tmp/install-miniconda.bash /tmp/environment.yml
 
 RUN mkdir -p ${R_LIBS_USER} && \
-chown -R ${NB_USER}:${NB_USER} ${R_LIBS_USER}
+    chown -R ${NB_USER}:${NB_USER} ${R_LIBS_USER}
 
 RUN curl --silent --location --fail https://download2.rstudio.org/rstudio-server-1.1.419-amd64.deb > /tmp/rstudio.deb && \
     echo '24cd11f0405d8372b4168fc9956e0386 /tmp/rstudio.deb' | md5sum -c - && \
