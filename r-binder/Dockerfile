@@ -51,6 +51,7 @@ RUN apt-get update && \
        cargo \
        libgdal-dev \
        libgeos-dev \
+       libgeos++-dev \
        libprotobuf-dev \
        && apt-get purge && \
     apt-get clean && \
