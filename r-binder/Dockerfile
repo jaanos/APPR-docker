@@ -52,7 +52,9 @@ RUN apt-get update && \
        libgdal-dev \
        libgeos-dev \
        libgeos++-dev \
+       libjq-dev \
        libprotobuf-dev \
+       protobuf-compiler \
        && apt-get purge && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
