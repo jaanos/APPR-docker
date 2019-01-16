@@ -54,6 +54,7 @@ RUN apt-get update && \
        libgeos++-dev \
        libjq-dev \
        libprotobuf-dev \
+       libudunits2-dev \
        protobuf-compiler \
        && apt-get purge && \
     apt-get clean && \
