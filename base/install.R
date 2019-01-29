@@ -71,6 +71,8 @@ install.packages(c(
     "XML"
 ))
 
+
 library(devtools)
 install_github("jaanos/rvest", ref="table-span-filling")
+install.packages("tweenr", repos="https://mran.microsoft.com/snapshot/2018-12-15/")
 install_github('thomasp85/gganimate')
