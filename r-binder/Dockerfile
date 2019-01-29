@@ -55,6 +55,7 @@ RUN apt-get update && \
        libjq-dev \
        libprotobuf-dev \
        libudunits2-dev \
+       libv8-3.14-dev \
        protobuf-compiler \
        && apt-get purge && \
     apt-get clean && \
