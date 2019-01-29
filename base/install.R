@@ -12,6 +12,7 @@ install.packages(c(
     "dplyr",
     "dplRCon",
     "DT",
+    "dygraphs",
     "eeptools",
     "ESGtoolkit",
     "extrafont",
