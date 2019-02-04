@@ -17,6 +17,7 @@ install.packages(c(
     "ESGtoolkit",
     "extrafont",
     "eurostat",
+    "factoextra",
     "forecast",
     "geojsonio",
     "GGally",
@@ -68,6 +69,7 @@ install.packages(c(
     "tidyverse",
     "tigerstats",
     "tseries",
+    "wesanderson",
     "XML"
 ))
 
