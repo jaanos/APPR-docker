@@ -54,6 +54,7 @@ install.packages(c(
     "RJSONIO",
     "rmapshaper",
     "rmarkdown",
+    "rowr",
     "RPostgreSQL",
     "rprojroot",
     "rsconnect",
@@ -65,10 +66,12 @@ install.packages(c(
     "sp",
     "spdplyr",
     "sqldf",
+    "StatMeasures",
     "tidyr",
     "tidyverse",
     "tigerstats",
     "tseries",
+    "usmap",
     "wesanderson",
     "XML"
 ))
