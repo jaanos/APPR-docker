@@ -16,4 +16,5 @@ install.packages(c(
 ))
 
 library(devtools)
+install_github("trnnick/tsutils")
 install_github("trnnick/TStools")
