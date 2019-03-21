@@ -72,6 +72,7 @@ install.packages(c(
     "tigerstats",
     "tseries",
     "usmap",
+    "webshot",
     "wesanderson",
     "XML"
 ))
