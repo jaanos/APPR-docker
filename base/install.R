@@ -34,6 +34,7 @@ install.packages(c(
     "knitr",
     "leaflet",
     "lubridate",
+    "maditr",
     "mapdata",
     "mapproj",
     "maps",
