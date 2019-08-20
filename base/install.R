@@ -19,6 +19,7 @@ install.packages(c(
     "eurostat",
     "factoextra",
     "forecast",
+    "fpp2",
     "geojsonio",
     "GGally",
     "ggdendro",
