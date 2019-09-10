@@ -3,7 +3,6 @@ install.packages(c(
     "debugme",
     "dichromat",
     "foreach",
-    "kableExtra",
     "lpSolve",
     "manipulateWidget",
     "miniUI",

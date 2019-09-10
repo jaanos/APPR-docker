@@ -54,6 +54,7 @@ RUN apt-get update && \
        libgeos++-dev \
        libjq-dev \
        libprotobuf-dev \
+       libsodium-dev \
        libudunits2-dev \
        libv8-3.14-dev \
        protobuf-compiler \
