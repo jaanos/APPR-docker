@@ -11,9 +11,9 @@ install.packages(c(
     "plumbr",
     "prediction",
     "testthat",
-    "tstools"
+    "tstools",
+    "tsutils"
 ))
 
 library(devtools)
-install_github("trnnick/tsutils")
 install_github("trnnick/TStools")

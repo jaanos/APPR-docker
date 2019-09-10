@@ -25,6 +25,7 @@ install.packages(c(
     "gapminder",
     "geojsonio",
     "GGally",
+    "gganimate",
     "ggdendro",
     "ggmap",
     "ggplot2",
@@ -85,6 +86,7 @@ install.packages(c(
     "tigerstats",
     "tripack",
     "tseries",
+    "tweenr",
     "usmap",
     "webshot",
     "wesanderson",
@@ -93,6 +95,4 @@ install.packages(c(
 
 
 library(devtools)
-install_github("jaanos/rvest", ref="table-span-filling")
-install.packages("tweenr", repos="https://mran.microsoft.com/snapshot/2018-12-15/")
-install_github('thomasp85/gganimate')
+install_github("jaanos/rvest", ref="table-span-filling-v.0.3.4.196")

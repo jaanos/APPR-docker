@@ -1,6 +1,6 @@
 FROM jaanos/appr:r-binder
 
-ENV MRAN_DATE 2018-10-26
+ENV MRAN_DATE 2019-09-10
 
 RUN R --quiet -e "install.packages('shiny', repos='https://mran.microsoft.com/snapshot/${MRAN_DATE}', method='libcurl')"
 

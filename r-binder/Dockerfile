@@ -82,12 +82,12 @@ RUN bash /tmp/install-miniconda.bash && \
 RUN mkdir -p ${R_LIBS_USER} && \
     chown -R ${NB_USER}:${NB_USER} ${R_LIBS_USER}
 
-RUN curl --silent --location --fail https://download2.rstudio.org/rstudio-server-1.1.419-amd64.deb > /tmp/rstudio.deb && \
+RUN curl --silent --location --fail https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.1335-amd64.deb > /tmp/rstudio.deb && \
     echo '24cd11f0405d8372b4168fc9956e0386 /tmp/rstudio.deb' | md5sum -c - && \
     dpkg -i /tmp/rstudio.deb && \
     rm /tmp/rstudio.deb
 
-RUN curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.7.907-amd64.deb > /tmp/shiny.deb && \
+RUN curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.9.923-amd64.deb > /tmp/shiny.deb && \
     echo '78371a8361ba0e7fec44edd2b8e425ac /tmp/shiny.deb' | md5sum -c - && \
     dpkg -i /tmp/shiny.deb && \
     rm /tmp/shiny.deb
@@ -101,8 +101,7 @@ RUN pip install --no-cache-dir nbrsessionproxy==0.7.0 && \
     jupyter nbextension install --py nbrsessionproxy --sys-prefix && \
     jupyter nbextension enable --py nbrsessionproxy --sys-prefix
 
-RUN R --quiet -e "install.packages('devtools', repos='https://mran.microsoft.com/snapshot/2018-02-01', method='libcurl')" && \
-    R --quiet -e "devtools::install_github('IRkernel/IRkernel', ref='0.8.11')" && \
+RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2019-09-10', method='libcurl')" && \
     R --quiet -e "IRkernel::installspec(prefix='$NB_PYTHON_PREFIX')"
 
 USER ${NB_USER}
