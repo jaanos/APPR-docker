@@ -73,7 +73,7 @@ ENV R_LIBS_USER ${APP_BASE}/rlibs
 ENV PATH ${CONDA_DIR}/bin:$HOME/.local/bin:/usr/lib/rstudio-server/bin/:${PATH}
 # If scripts required during build are present, copy them
 
-COPY conda/environment.py-3.6.frozen.yml /tmp/environment.yml
+COPY conda/environment.yml /tmp/environment.yml
 
 COPY conda/install-miniconda.bash /tmp/install-miniconda.bash
 RUN bash /tmp/install-miniconda.bash && \
