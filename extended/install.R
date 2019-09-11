@@ -3,8 +3,6 @@ install.packages(c(
     "debugme",
     "dichromat",
     "foreach",
-    "geojson",
-    "kableExtra",
     "lpSolve",
     "manipulateWidget",
     "miniUI",
@@ -13,7 +11,8 @@ install.packages(c(
     "plumbr",
     "prediction",
     "testthat",
-    "tstools"
+    "tstools",
+    "tsutils"
 ))
 
 library(devtools)
