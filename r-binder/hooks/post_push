@@ -1,4 +1,4 @@
 #!/bin/bash
 TAG=r-binder-$(date +%Y-%m-%d)
 docker tag $IMAGE_NAME $DOCKER_REPO:$TAG
-docker push $DOCKER_REPO:TAG
+docker push $DOCKER_REPO:$TAG
