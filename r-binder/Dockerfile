@@ -66,11 +66,11 @@ EXPOSE 8888
 # Environment variables required for build
 ENV APP_BASE /srv
 ENV CONDA_DIR ${APP_BASE}/conda
-ENV NB_PYTHON_PREFIX ${CONDA_DIR}
+ENV NB_PYTHON_PREFIX ${CONDA_DIR}/envs/notebook
 ENV KERNEL_PYTHON_PREFIX ${NB_PYTHON_PREFIX}
 ENV R_LIBS_USER ${APP_BASE}/rlibs
 # Special case PATH
-ENV PATH ${CONDA_DIR}/bin:$HOME/.local/bin:/usr/lib/rstudio-server/bin/:${PATH}
+ENV PATH ${NB_PYTHON_PREFIX}/bin:${CONDA_DIR}/bin:$HOME/.local/bin:/usr/lib/rstudio-server/bin/:${PATH}
 # If scripts required during build are present, copy them
 
 COPY conda/environment.yml /tmp/environment.yml
