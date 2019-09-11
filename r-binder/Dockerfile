@@ -49,6 +49,7 @@ RUN apt-get update && \
        r-base \
        sudo \
        cargo \
+       libclang-dev \
        libgdal-dev \
        libgeos-dev \
        libgeos++-dev \
