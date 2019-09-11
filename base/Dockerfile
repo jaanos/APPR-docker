@@ -1,4 +1,4 @@
-FROM jaanos/appr:r-binder
+FROM jaanos/appr:r-binder-2019
 
 ENV MRAN_DATE 2019-09-10
 
