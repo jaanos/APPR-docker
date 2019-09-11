@@ -2,8 +2,6 @@ FROM jaanos/appr:r-binder
 
 ENV MRAN_DATE 2019-09-10
 
-RUN R --quiet -e "install.packages('shiny', repos='https://mran.microsoft.com/snapshot/${MRAN_DATE}', method='libcurl')"
-
 USER root
 COPY install.R ${HOME}
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
