@@ -32,10 +32,14 @@ RUN adduser --disabled-password \
     ${NB_USER}
 WORKDIR ${HOME}
 
+ENV DISTRO bionic
+
 RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  apt-key add - && \
-    DISTRO="bionic" && \
-    echo "deb https://deb.nodesource.com/node_10.x $DISTRO main" >> /etc/apt/sources.list.d/nodesource.list && \
-    echo "deb-src https://deb.nodesource.com/node_10.x $DISTRO main" >> /etc/apt/sources.list.d/nodesource.list
+    echo "deb https://deb.nodesource.com/node_10.x ${DISTRO} main" >> /etc/apt/sources.list.d/nodesource.list && \
+    echo "deb-src https://deb.nodesource.com/node_10.x ${DISTRO} main" >> /etc/apt/sources.list.d/nodesource.list
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && \
+    add-apt-repository "deb https://cloud.r-project.org/bin/linux/ubuntu ${DISTRO}-cran35/"
 
 RUN apt-get update && \
     apt-get install --yes --no-install-recommends \
@@ -54,6 +58,7 @@ RUN apt-get update && \
        libgeos-dev \
        libgeos++-dev \
        libjq-dev \
+       libmagick++-dev \
        libprotobuf-dev \
        libsodium-dev \
        libudunits2-dev \
@@ -103,7 +108,7 @@ RUN pip install --no-cache-dir https://github.com/jupyterhub/jupyter-server-prox
     jupyter nbextension install --py jupyter_server_proxy --sys-prefix && \
     jupyter nbextension enable --py jupyter_server_proxy --sys-prefix
 
-RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2019-09-10', method='libcurl')" && \
+RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2019-09-12', method='libcurl')" && \
     R --quiet -e "IRkernel::installspec(prefix='$NB_PYTHON_PREFIX')"
 
 USER ${NB_USER}

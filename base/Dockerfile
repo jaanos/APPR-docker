@@ -1,6 +1,6 @@
 FROM jaanos/appr:r-binder-2019
 
-ENV MRAN_DATE 2019-09-10
+ENV MRAN_DATE 2019-09-12
 
 USER root
 COPY install.R ${HOME}

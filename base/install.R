@@ -10,13 +10,13 @@ install.packages(c(
     "DBI",
     "dbplyr",
     "deldir",
-    "dplyr",
     "dplRCon",
+    "dplyr",
     "dygraphs",
     "eeptools",
     "ESGtoolkit",
-    "extrafont",
     "eurostat",
+    "extrafont",
     "factoextra",
     "fields",
     "forecast",
@@ -91,4 +91,4 @@ install.packages(c(
 
 
 library(devtools)
-install_github("jaanos/rvest", ref="table-span-filling-v.0.3.4.196")
+install_github("jaanos/rvest", ref="table-span-filling-v0.3.4.196")
