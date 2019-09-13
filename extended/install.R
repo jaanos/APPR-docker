@@ -13,6 +13,3 @@ install.packages(c(
     "tstools",
     "tsutils"
 ))
-
-library(devtools)
-install_github("trnnick/TStools")
