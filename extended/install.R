@@ -3,7 +3,6 @@ install.packages(c(
     "debugme",
     "dichromat",
     "foreach",
-    "kableExtra",
     "lpSolve",
     "manipulateWidget",
     "miniUI",
@@ -11,10 +10,6 @@ install.packages(c(
     "plotGoogleMaps",
     "plumbr",
     "prediction",
-    "testthat",
-    "tstools"
+    "tstools",
+    "tsutils"
 ))
-
-library(devtools)
-install_github("trnnick/tsutils")
-install_github("trnnick/TStools")
