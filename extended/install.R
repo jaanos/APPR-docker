@@ -10,7 +10,6 @@ install.packages(c(
     "plotGoogleMaps",
     "plumbr",
     "prediction",
-    "testthat",
     "tstools",
     "tsutils"
 ))

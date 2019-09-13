@@ -1,7 +1,7 @@
 # Konfiguracije za Docker za potrebe APPR
 
-* [![Jupyter](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/r-binder-image) Jupyter
-* [![RStudio](http://mybinder.org/badge.svg)](http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/r-binder-image?urlpath=rstudio) RStudio
+* [![Jupyter](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/jaanos/APPR-docker/r-binder-image) Jupyter
+* [![RStudio](http://mybinder.org/badge.svg)](http://mybinder.org/v2/gh/jaanos/APPR-docker/r-binder-image?urlpath=rstudio) RStudio
 
 Ta repozitorij vsebuje konfiguracijske datoteke za [Docker](https://shiny.rstudio.com/) za poganjanje projektov pri predmetu Analiza podatkov s programom R na spletu v orodju [Binder](https://mybinder.org/) z okoljema [RStudio](https://www.rstudio.com/) in [Shiny](https://shiny.rstudio.com/).
 
@@ -13,14 +13,14 @@ Trenutno so na voljo konfiguracije za tri slike:
 * [`base`](base/): slika za osnovno uporabo s Shiny in drugimi paketi
 * [`extended`](extended/): slika z namestitvijo dodatnih paketov
 
-Same slike gostujejo na [Docker Hub](https://hub.docker.com/) (in se tam tudi generirajo) v repozitoriju [`jaanos/appr`](https://hub.docker.com/r/jaanos/appr/).
+Same slike gostujejo na [Docker Hub](https://hub.docker.com/) (in se tam tudi generirajo) v repozitoriju [`jaanos/appr`](https://hub.docker.com/r/jaanos/appr/). Aktualne slike imajo ime, ki se konča z `-2019`, vmesne slike pa imajo na koncu celoten datum. Slike brez priponke k imenu so iz 2018/19.
 
 ## Uporaba
 
 Za poganjanje programa z repozitorija na GitHubu je najprej potrebno poskrbeti za datoteko `Dockerfile` v vrhnji mapi repozitorija, ki naj izgleda približno tako:
 
 ```Dockerfile
-FROM jaanos/appr:base
+FROM jaanos/appr:base-2019
 
 USER root
 COPY . ${HOME}
@@ -30,19 +30,19 @@ USER ${NB_USER}
 RUN if [ -f install.R ]; then R --quiet -f install.R; fi
 ```
 
-Prva vrstica določa, katera slika (`base`) iz katerega repozitorija (`jaanos/appr`) se bo uporabila. Sledijo vrstice, ki poskrbijo za kopiranje vsebine repozitorija v končno sliko. Zadnja vrstica preveri, ali obstaja datoteka `install.R`, in jo v tem primeru požene - tako je mogoče namestiti dodatne pakete.
+Prva vrstica določa, katera slika (`base-2019`) iz katerega repozitorija (`jaanos/appr`) se bo uporabila. Sledijo vrstice, ki poskrbijo za kopiranje vsebine repozitorija v končno sliko. Zadnja vrstica preveri, ali obstaja datoteka `install.R`, in jo v tem primeru požene - tako je mogoče namestiti dodatne pakete.
 
 Repozitorij z zgornjo datoteko je mogoče zagnati na naslovu
 
-    http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/master
+    http://mybinder.org/v2/gh/jaanos/APPR-docker/master
 
 Namesto `jaanos/APPR-docker` seveda uporabimo ime želenega repozitorija, namesto `master` pa lahko podamo želeno ime veje ali značke oziroma šifro commita.
 Privzeto se zažene Jupyter, ki nam omogoča delo tako s Python 3 kot z R. Pod *New* lahko izberemo tudi *RStudio Session*, kar bo pognalo RStudio v brskalniku.
 
 Lahko pa tudi neposredno poženemo RStudio oziroma aplikacijo Shiny:
 
-    http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/master?urlpath=rstudio
-    http://beta.mybinder.org/v2/gh/jaanos/APPR-docker/master?urlpath=shiny/pot/do/aplikacije
+    http://mybinder.org/v2/gh/jaanos/APPR-docker/master?urlpath=rstudio
+    http://mybinder.org/v2/gh/jaanos/APPR-docker/master?urlpath=shiny/pot/do/aplikacije
 
 V slednjem primeru nadomestimo `pod/do/aplikacije` s potjo do mape z `ui.R` in `server.R` oziroma datoteke `.Rmd`.
 

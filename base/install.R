@@ -10,14 +10,13 @@ install.packages(c(
     "DBI",
     "dbplyr",
     "deldir",
-    "dplyr",
     "dplRCon",
-    "DT",
+    "dplyr",
     "dygraphs",
     "eeptools",
     "ESGtoolkit",
-    "extrafont",
     "eurostat",
+    "extrafont",
     "factoextra",
     "fields",
     "forecast",
@@ -28,7 +27,6 @@ install.packages(c(
     "gganimate",
     "ggdendro",
     "ggmap",
-    "ggplot2",
     "ggpubr",
     "ggrepel",
     "ggthemes",
@@ -57,7 +55,6 @@ install.packages(c(
     "RCurl",
     "readr",
     "readxl",
-    "reshape2",
     "rgdal",
     "rgeos",
     "RgoogleMaps",
@@ -67,7 +64,6 @@ install.packages(c(
     "rmarkdown",
     "rowr",
     "RPostgreSQL",
-    "rprojroot",
     "rsconnect",
     "rworldmap",
     "shinyalert",
@@ -95,4 +91,4 @@ install.packages(c(
 
 
 library(devtools)
-install_github("jaanos/rvest", ref="table-span-filling-v.0.3.4.196")
+install_github("jaanos/rvest", ref="table-span-filling-v0.3.4.196")
