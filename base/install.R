@@ -26,6 +26,7 @@ install.packages(c(
     "GGally",
     "gganimate",
     "ggdendro",
+    "ggforce",
     "ggmap",
     "ggpubr",
     "ggrepel",
