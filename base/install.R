@@ -81,6 +81,7 @@ install.packages(c(
     "tidyr",
     "tidyverse",
     "tigerstats",
+    "tmap",
     "tripack",
     "tseries",
     "tweenr",
