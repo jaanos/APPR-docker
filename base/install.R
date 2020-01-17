@@ -77,6 +77,7 @@ install.packages(c(
     "sp",
     "spdplyr",
     "sqldf",
+    "StandardizeText",
     "StatMeasures",
     "tidyr",
     "tidyverse",
