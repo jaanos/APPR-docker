@@ -91,6 +91,7 @@ install.packages(c(
     "tripack",
     "tseries",
     "tweenr",
+    "useful",
     "usmap",
     "webshot",
     "wesanderson",
