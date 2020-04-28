@@ -1,15 +1,19 @@
 install.packages(c(
     "csvread",
+    "CVXR",
     "debugme",
     "dichromat",
     "foreach",
+    "ggfortify",
     "lpSolve",
     "manipulateWidget",
     "miniUI",
     "pbapply",
     "plotGoogleMaps",
     "plumbr",
+    "portfolioBacktest",
     "prediction",
+    "riskParityPortfolio",
     "tstools",
     "tsutils"
 ))

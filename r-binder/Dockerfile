@@ -59,6 +59,7 @@ RUN apt-get update && \
        libgeos++-dev \
        libjq-dev \
        libmagick++-dev \
+       libmpfr-dev \
        libprotobuf-dev \
        libsodium-dev \
        libudunits2-dev \
