@@ -77,6 +77,7 @@ install.packages(c(
     "shinydashboard",
     "shinyFeedback",
     "shinyjs",
+    "shinymanager",
     "shinythemes",
     "sodium",
     "sp",
