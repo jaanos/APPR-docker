@@ -3,6 +3,7 @@ install.packages(c(
     "anytime",
     "bcrypt",
     "bitops",
+    "caret",
     "caTools",
     "chron",
     "corrplot",
