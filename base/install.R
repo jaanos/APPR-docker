@@ -40,6 +40,7 @@ install.packages(c(
     "gridExtra",
     "gsubfn",
     "hash",
+    "htmltab",
     "kableExtra",
     "knitr",
     "leaflet",
