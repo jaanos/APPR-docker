@@ -7,6 +7,7 @@ install.packages(c(
     "caTools",
     "chron",
     "corrplot",
+    "countrycode",
     "cowplot",
     "DBI",
     "dbplyr",
