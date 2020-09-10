@@ -51,6 +51,7 @@ install.packages(c(
     "mapproj",
     "maps",
     "maptools",
+    "mclust",
     "mlbench",
     "mosaic",
     "naniar",
