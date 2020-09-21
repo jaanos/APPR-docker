@@ -3,9 +3,11 @@ install.packages(c(
     "anytime",
     "bcrypt",
     "bitops",
+    "caret",
     "caTools",
     "chron",
     "corrplot",
+    "countrycode",
     "cowplot",
     "DBI",
     "dbplyr",
@@ -39,6 +41,7 @@ install.packages(c(
     "gridExtra",
     "gsubfn",
     "hash",
+    "htmltab",
     "kableExtra",
     "knitr",
     "leaflet",
@@ -48,6 +51,7 @@ install.packages(c(
     "mapproj",
     "maps",
     "maptools",
+    "mclust",
     "mlbench",
     "mosaic",
     "naniar",
@@ -77,6 +81,7 @@ install.packages(c(
     "shinydashboard",
     "shinyFeedback",
     "shinyjs",
+    "shinymanager",
     "shinythemes",
     "sodium",
     "sp",
@@ -100,4 +105,4 @@ install.packages(c(
 
 
 library(devtools)
-install_github("jaanos/rvest", ref="table-span-filling-v0.3.4.196")
+install_github("jaanos/rvest", ref="table-span-filling-v0.3.6.196")
