@@ -89,12 +89,12 @@ RUN bash /tmp/install-miniconda.bash && \
 RUN mkdir -p ${R_LIBS_USER} && \
     chown -R ${NB_USER}:${NB_USER} ${R_LIBS_USER}
 
-RUN curl --silent --location --fail https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.2.1335-amd64.deb > /tmp/rstudio.deb && \
+RUN curl --silent --location --fail https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb > /tmp/rstudio.deb && \
     echo '7e84f384a87e219d20c00d8a6bccf532 /tmp/rstudio.deb' | md5sum -c - && \
     dpkg -i /tmp/rstudio.deb && \
     rm /tmp/rstudio.deb
 
-RUN curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.9.923-amd64.deb > /tmp/shiny.deb && \
+RUN curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.14.949-amd64.deb > /tmp/shiny.deb && \
     echo '14b591d77b51cfe1fc38168d332ea0ea /tmp/shiny.deb' | md5sum -c - && \
     dpkg -i /tmp/shiny.deb && \
     rm /tmp/shiny.deb
@@ -109,7 +109,7 @@ RUN pip install --no-cache-dir https://github.com/jupyterhub/jupyter-server-prox
     jupyter nbextension install --py jupyter_server_proxy --sys-prefix && \
     jupyter nbextension enable --py jupyter_server_proxy --sys-prefix
 
-RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2019-09-12', method='libcurl')" && \
+RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2020-09-21', method='libcurl')" && \
     R --quiet -e "IRkernel::installspec(prefix='$NB_PYTHON_PREFIX')"
 
 USER ${NB_USER}

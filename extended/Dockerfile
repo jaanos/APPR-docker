@@ -1,4 +1,4 @@
-FROM jaanos/appr:base-2019
+FROM jaanos/appr:base-2020
 
 USER root
 COPY install.R ${HOME}
