@@ -90,12 +90,12 @@ RUN mkdir -p ${R_LIBS_USER} && \
     chown -R ${NB_USER}:${NB_USER} ${R_LIBS_USER}
 
 RUN curl --silent --location --fail https://download2.rstudio.org/server/bionic/amd64/rstudio-server-1.3.1093-amd64.deb > /tmp/rstudio.deb && \
-    echo '7e84f384a87e219d20c00d8a6bccf532 /tmp/rstudio.deb' | md5sum -c - && \
+    echo 'c364778cb79e3de2259c08e8d00eff01 /tmp/rstudio.deb' | md5sum -c - && \
     dpkg -i /tmp/rstudio.deb && \
     rm /tmp/rstudio.deb
 
 RUN curl --silent --location --fail https://download3.rstudio.org/ubuntu-14.04/x86_64/shiny-server-1.5.14.949-amd64.deb > /tmp/shiny.deb && \
-    echo '14b591d77b51cfe1fc38168d332ea0ea /tmp/shiny.deb' | md5sum -c - && \
+    echo '92669eeb2e82fdfa176ac8d607b1000d /tmp/shiny.deb' | md5sum -c - && \
     dpkg -i /tmp/shiny.deb && \
     rm /tmp/shiny.deb
 
@@ -103,8 +103,8 @@ RUN sed -i -e '/^R_LIBS_USER=/s/^/#/' /etc/R/Renviron && \
     echo "R_LIBS_USER=${R_LIBS_USER}" >> /etc/R/Renviron
 
 USER ${NB_USER}
-RUN pip install --no-cache-dir https://github.com/jupyterhub/jupyter-server-proxy/archive/7ac0125.zip && \
-    pip install --no-cache-dir jupyter-rsession-proxy==1.0b6 && \
+RUN pip install --no-cache-dir jupyter-server-proxy==1.5.0 && \
+    pip install --no-cache-dir jupyter-rsession-proxy==1.2 && \
     jupyter serverextension enable jupyter_server_proxy --sys-prefix && \
     jupyter nbextension install --py jupyter_server_proxy --sys-prefix && \
     jupyter nbextension enable --py jupyter_server_proxy --sys-prefix
