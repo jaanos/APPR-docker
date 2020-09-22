@@ -72,7 +72,6 @@ install.packages(c(
     "rmarkdown",
     "rnaturalearth",
     "rnaturalearthdata",
-    "rowr",
     "RPostgreSQL",
     "rsconnect",
     "rworldmap",
