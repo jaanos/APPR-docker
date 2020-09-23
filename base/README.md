@@ -14,4 +14,4 @@ V datoteki [`Dockerfile`](Dockerfile) spremenljivka `MRAN_DATE` določa datum (v
 za katerega se uporabi slika repozitorija [CRAN](https://cran.r-project.org/) paketov za R.
 Tako je potrebno popraviti datum, če se nameščajo novejše različice paketov.
 
-Generiranje slike na [Docker Hub](https://hub.docker.com/) traja približno 2 uri.
+Generiranje slike na [Docker Hub](https://hub.docker.com/) traja približno 1 uro.
