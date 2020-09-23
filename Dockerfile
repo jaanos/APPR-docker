@@ -1,1 +1,1 @@
-FROM jaanos/appr:extended-2019
+FROM jaanos/appr:extended-2020

@@ -109,7 +109,7 @@ RUN pip install --no-cache-dir https://github.com/jupyterhub/jupyter-server-prox
     jupyter nbextension install --py jupyter_server_proxy --sys-prefix && \
     jupyter nbextension enable --py jupyter_server_proxy --sys-prefix
 
-RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2019-09-12', method='libcurl')" && \
+RUN R --quiet -e "install.packages(c('devtools', 'IRkernel'), repos='https://mran.microsoft.com/snapshot/2020-09-21', method='libcurl')" && \
     R --quiet -e "IRkernel::installspec(prefix='$NB_PYTHON_PREFIX')"
 
 USER ${NB_USER}
