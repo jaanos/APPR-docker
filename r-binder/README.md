@@ -9,4 +9,4 @@ ki jo generira orodje [`repo2docker`](https://github.com/jupyter/repo2docker).
 Tako slika vsebuje tudi strežnik [Shiny](https://shiny.rstudio.com/),
 ne vsebuje pa R-jevega paketa `shiny` in ostalih dodatnih paketov.
 
-Generiranje slike na [Docker Hub](https://hub.docker.com/) traja približno 1 uro.
+Generiranje slike na [Docker Hub](https://hub.docker.com/) traja približno 15 minut.

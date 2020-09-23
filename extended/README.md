@@ -8,4 +8,4 @@ na kateri sloni.
 
 Seznam nameščenih paketov je v datoteki [`install.R`](install.R).
 
-Generiranje slike na [Docker Hub](https://hub.docker.com/) traja približno 30 minut.
+Generiranje slike na [Docker Hub](https://hub.docker.com/) traja približno 20 minut.
