@@ -41,7 +41,8 @@ RUN wget --quiet -O - https://deb.nodesource.com/gpgkey/nodesource.gpg.key |  ap
 RUN apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9 && \
     echo "deb https://cloud.r-project.org/bin/linux/ubuntu ${DISTRO}-cran35/" >> /etc/apt/sources.list.d/cran.list
 
-RUN apt-get update && \
+RUN add-apt-repository -y ppa:cran/poppler && \
+    apt-get update && \
     apt-get install --yes --no-install-recommends \
        less \
        nodejs \
@@ -60,6 +61,7 @@ RUN apt-get update && \
        libjq-dev \
        libmagick++-dev \
        libmpfr-dev \
+       libpoppler-cpp-dev \
        libprotobuf-dev \
        libsodium-dev \
        libudunits2-dev \
