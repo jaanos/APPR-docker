@@ -27,6 +27,7 @@ install.packages(c(
     "gapminder",
     "geojsonio",
     "geosphere",
+    "gifski",
     "GGally",
     "gganimate",
     "ggdendro",
