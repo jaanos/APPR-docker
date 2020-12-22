@@ -11,7 +11,6 @@ install.packages(c(
     "miniUI",
     "neuralnet",
     "pbapply",
-    "plotGoogleMaps",
     "plumbr",
     "portfolioBacktest",
     "prediction",
