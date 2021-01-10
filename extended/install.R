@@ -11,6 +11,7 @@ install.packages(c(
     "miniUI",
     "neuralnet",
     "pbapply",
+    "phangorn",
     "plumbr",
     "portfolioBacktest",
     "prediction",
