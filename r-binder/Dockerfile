@@ -63,7 +63,6 @@ RUN apt-get update && \
        libjq-dev \
        libmagick++-dev \
        libmpfr-dev \
-       libnode-dev \
        libpoppler-cpp-dev \
        libprotobuf-dev \
        libsodium-dev \
