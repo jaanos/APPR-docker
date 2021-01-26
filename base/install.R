@@ -109,6 +109,7 @@ install.packages(c(
     "tweenr",
     "useful",
     "usmap",
+    "waffle",
     "webshot",
     "wesanderson",
     "wordcloud",
