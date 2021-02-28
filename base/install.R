@@ -69,6 +69,7 @@ install.packages(c(
     "PerformanceAnalytics",
     "plotly",
     "plotrix",
+    "Quandl",
     "quantmod",
     "RCurl",
     "readr",
