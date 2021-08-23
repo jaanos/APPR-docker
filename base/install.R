@@ -59,6 +59,7 @@ install.packages(c(
     "maps",
     "maptools",
     "mclust",
+    "mgsub",
     "mlbench",
     "mosaic",
     "naniar",
